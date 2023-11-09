@@ -557,11 +557,11 @@ class Screen:
 
     def _dump_reg_and_mem(self):
         with open('dumps/register_file.txt', 'w') as out:
-            print("\n".join([f'{x:032b}' for x in self.risc_v.state.register_file]), file=out)            
+            print("\n".join([f'{x:032b}' for x in self.risc_v.state.register_file]), file=out)
 
         global g_memory
         with open('dumps/memory.txt', 'w') as out:
-            print("\n".join([f'{x:032b}' for x in g_memory]), file=out)    
+            print("\n".join([f'{x:032b}' for x in g_memory]), file=out)
 
     def _assemble_file(self, filename):
         try:
@@ -598,8 +598,8 @@ class Screen:
         cycle_count_label.grid(row=0, column=1, sticky=W)
 
     def _setup_register_file_entries(self):
-        rf_pane = ttk.Panedwindow(self.pipeline_window, orient=VERTICAL, width=200, height=100)
-        rf_pane.place(x=230, y=0)
+        rf_pane = ttk.Panedwindow(self.pipeline_window, orient=VERTICAL, width=150, height=100)
+        rf_pane.place(x=260, y=0)
 
         l = Label(rf_pane, text="Register file")
         l.grid(row=0, column=0, sticky=W)
