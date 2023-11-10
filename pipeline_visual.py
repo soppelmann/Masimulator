@@ -89,10 +89,10 @@ class PipelineGraphics:
             processor.state.pipe.mem_wb.instruction))
 
     def _color_inserted_nops(self, processor):
-        self.id_instruction_label.config(fg="black")
-        self.ex_instruction_label.config(fg="black")
-        self.mem_instruction_label.config(fg="black")
-        self.wb_instruction_label.config(fg="black")
+        self.id_instruction_label.config(fg="white")
+        self.ex_instruction_label.config(fg="white")
+        self.mem_instruction_label.config(fg="white")
+        self.wb_instruction_label.config(fg="white")
         if processor.state.pipe.if_id.nop_inserted:
             self.id_instruction_label.config(fg="red")
         if processor.state.pipe.id_ex.nop_inserted:

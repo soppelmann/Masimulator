@@ -770,9 +770,9 @@ class Screen:
             else:
                 rf_entry.insert(0, to_int32(self.risc_v.state.register_file[i]))
             if value_before != value_now:
-                self.register_file_entries[i].config({"background": "Yellow"})
+                self.register_file_entries[i].config({"background": "Blue"})
             else:
-                self.register_file_entries[i].config({"background": "White"})
+                self.register_file_entries[i].config({"background": "Black"})
 
     def modify_data_memory(self, is_in_hex):
         text = self.data_memory_box.get("1.0", END)
